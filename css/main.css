@@ -516,6 +516,21 @@
   margin-bottom: 30px; }
   .division .division_card {
     float: right; }
+  .division .culture_box {
+    width: 460px;
+    height: 370px;
+    padding-top: 28px;
+    float: right;
+    margin-top: -92px;
+    background-color: #ff0000; }
+    .division .culture_box li {
+      font-size: 16px;
+      color: #fff;
+      line-height: 50px;
+      text-align: left;
+      margin-left: 38px; }
+      .division .culture_box li span {
+        font-weight: bold; }
 
 .contact_center {
   overflow: hidden;
