@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="云端科技 www.yunduancn.com">
+	<title>梵思</title>
+	<link rel="stylesheet" href="css/minireset.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+	<!-- 头部开始 -->
+	<div class="header">
+		<div class="center">
+
+			<!-- LOGO -->
+			<a href="" class="logo" style="background-image: url(images/logo.jpg);"></a>
+
+			<!-- 中英文切换 -->
+			<div class="language_change">
+				<span>中/EN</span>
+				<ul class="language_group">
+					<li><a href="">中文简体</a></li>
+					<li><a href="">中文繁體</a></li>
+					<li><a href="">EN</a></li>
+				</ul>
+			</div>
+
+			<!-- 搜索 -->
+			<form action="" class="search_form">
+				<input type="button" class="search_icon" onclick="">
+				<input type="text" class="search_area" placeholder="请输入关键词">
+			</form>
+
+			<!-- 头部导航 -->
+			<ul class="header_menu">
+				<!-- 当前所在加 header_on 这个类 -->
+				<li class="fir_item">
+					<a href="" class="fir_a">首页</a>
+				</li>
+				<li class="fir_item header_on">
+					<a href="" class="fir_a">关于梵思</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">新闻中心</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">人力资源</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">联系我们</a>
+				</li>
+			</ul>
+			<div class="back"></div>
+		</div>
+	</div>
+	<!-- 头部结束 -->
+
+	<!-- 内页banner开始 -->
+	<div class="ny_banner" style="background-image: url(images/nybanner2.jpg);"></div>
+	<!-- 内页banner结束 -->
+
+
+
+	<!-- 面包屑导航开始 -->
+	<div class="crumbs">
+		<div class="center">
+			<a href="" class="gohome"><i></i></a>
+			<a href="" class="now_title">关于梵思<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+			<ul class="crumbs_menu">
+				<li><a href="">公司简介</a></li>
+				<li><a href="">企业文化</a></li>
+				<li class="crumbs_menu_on"><a href="">品牌战略</a></li>
+			</ul>
+			<div class="crumbs_back"></div>
+			<script>
+				// 选项卡导航滑块
+				function crumbsBack() {
+					var oldLeft = $('.crumbs_menu_on').position().left+15;
+					var oldWidth = $('.crumbs_menu_on').width();
+					$('.crumbs_back').css({
+						'left': oldLeft,
+						'width': oldWidth
+					});
+				};
+				// 鼠标经过选项卡时改变滑块位置及宽度
+				$('.crumbs_menu li').hover(function() {
+					var nowLeft = $(this).position().left+15;
+					var nowWidth = $(this).width();
+					$('.crumbs_back').css({
+						'left': nowLeft,
+						'width': nowWidth
+					});
+				}, function() {
+					crumbsBack();
+				});
+				// 初始化
+				crumbsBack();
+			</script>
+		</div>
+	</div>
+	<!-- 面包屑导航结束 -->
+
+
+	<div class="brand_box center">
+		<div class="watermark"></div>
+		<div class="brand_title_eng">Brand Strategy</div>
+		<div class="brand_title">品牌战略</div>
+		<div class="brand_text1">梵思二年多历经三大战略发展阶段，形成了科学、前瞻、有效的发展模式，不断创造跨越式发展奇迹，为服务企业和经济社会发展做出了贡献。</div>
+		<img src="images/brand1.jpg" alt="" class="brand_img1">
+		<div class="brand_title2">规模取胜</div>
+		<div class="brand_text2">梵思2016年成立于江西，公司从零开始，采取“规模取胜”的发展战略，以“高质量、低价格、低成本”的产品定位，迅速完成了企业发展最基本的积累。<br>2017年3月，公司在江西召开第一次全体员工大会，确立了梵思宗旨、梵思精神和梵思作风，明确了队伍建设标准，完善了各项规章制度300条，建立了与时俱进的激励机制和约束机制，创立了独特的“目标计划管理”体系。<br>2018年开始，公司在管理上实施了紧密型集团化管理模式，在运营上采用了统一规划、统一招标、统一采购、统一配送的标准化运营模式，同时确立了服务于中小型企业的营销定位。到2018年，公司实现了“规模取胜”的战略目标，成为广告营销优秀企业。</div>
+		<div class="brand_title2">全国布局</div>
+		<div class="brand_text2">公司首先立足江西，依托江西所积累的企业优势，向长三角经济圈延伸，率先登陆福建，其次浙江，最终稳定于上海，从而辐射长三角经济圈。<br>接下来，由江西向下延伸至广东，依托江西所积累的企业优势，向珠三角经济圈发展，率先登陆广州，最终稳定于广州，从而辐射珠三角经济圈。<br>最后公司将要北上发展环渤海经济圈，依托公司在长江、珠江经济圈所积累的企业优势，向环渤海经济圈延伸，从北京辐射周边，稳定后辐射环渤海经济圈，最终依托三大经济圈而辐射全国，成为全国广告营销优秀企业。</div>
+		<img src="images/brand2.jpg" alt="" class="brand_img2">
+		<img src="images/brand3.jpg" alt="" class="brand_img3">
+	</div>
+
+
+
+
+	<!-- footer开始 -->
+	<div class="footer">
+		<div class="footer_topbar">
+			<div class="center">
+				<div class="follow_us">
+					关注梵思集团
+				</div>
+					<div class="footer_weixin">
+						<!-- 记得替换此二维码 -->
+						<img src="images/qr.jpg" alt="" class="footer_qr">
+					</div>
+			</div>
+		</div>
+		<div class="center">
+			<div class="copyright">版权所有：江西梵思文化发展有限公司 赣ICP备06005994号</div>
+			<ul class="footer_menu">
+				<li><a href="">法律申明</a></li>
+				<li><a href="">投诉建议</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- footer结束 -->
+	<script src="js/main.js"></script>
+</body>
+</html>

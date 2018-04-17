@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="云端科技 www.yunduancn.com">
+	<title>梵思</title>
+	<link rel="stylesheet" href="css/minireset.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+	<!-- 头部开始 -->
+	<div class="header">
+		<div class="center">
+
+			<!-- LOGO -->
+			<a href="" class="logo" style="background-image: url(images/logo.jpg);"></a>
+
+			<!-- 中英文切换 -->
+			<div class="language_change">
+				<span>中/EN</span>
+				<ul class="language_group">
+					<li><a href="">中文简体</a></li>
+					<li><a href="">中文繁體</a></li>
+					<li><a href="">EN</a></li>
+				</ul>
+			</div>
+
+			<!-- 搜索 -->
+			<form action="" class="search_form">
+				<input type="button" class="search_icon" onclick="">
+				<input type="text" class="search_area" placeholder="请输入关键词">
+			</form>
+
+			<!-- 头部导航 -->
+			<ul class="header_menu">
+				<!-- 当前所在加 header_on 这个类 -->
+				<li class="fir_item">
+					<a href="" class="fir_a">首页</a>
+				</li>
+				<li class="fir_item header_on">
+					<a href="" class="fir_a">关于梵思</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">新闻中心</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">人力资源</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">联系我们</a>
+				</li>
+			</ul>
+			<div class="back"></div>
+		</div>
+	</div>
+	<!-- 头部结束 -->
+
+	<!-- 内页banner开始 -->
+	<div class="ny_banner" style="background-image: url(images/nybanner1.jpg);"></div>
+	<!-- 内页banner结束 -->
+
+
+
+	<!-- 面包屑导航开始 -->
+	<div class="crumbs">
+		<div class="center">
+			<a href="" class="gohome"><i></i></a>
+			<a href="" class="now_title">关于梵思<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+			<ul class="crumbs_menu">
+				<li class="crumbs_menu_on"><a href="">公司简介</a></li>
+				<li><a href="">企业理念</a></li>
+				<li><a href="">品牌战略</a></li>
+			</ul>
+			<div class="crumbs_back"></div>
+			<script>
+				// 选项卡导航滑块
+				function crumbsBack() {
+					var oldLeft = $('.crumbs_menu_on').position().left+15;
+					var oldWidth = $('.crumbs_menu_on').width();
+					$('.crumbs_back').css({
+						'left': oldLeft,
+						'width': oldWidth
+					});
+				};
+				// 鼠标经过选项卡时改变滑块位置及宽度
+				$('.crumbs_menu li').hover(function() {
+					var nowLeft = $(this).position().left+15;
+					var nowWidth = $(this).width();
+					$('.crumbs_back').css({
+						'left': nowLeft,
+						'width': nowWidth
+					});
+				}, function() {
+					crumbsBack();
+				});
+				// 初始化
+				crumbsBack();
+			</script>
+		</div>
+	</div>
+	<!-- 面包屑导航结束 -->
+
+
+	<!-- 中间内容 -->
+	<!-- 因为不确定哪些图片可以点击，所以都做成了链接形式，如果需要跳转请自行增加href属性，并将cursor:auto删除。 -->
+	<div class="about_box center">
+		<div class="about_box_left">
+			<a class="simple_card about_box_left1" style="cursor: auto;">
+				<img src="images/01.jpg" alt="">
+				<!-- <span class="about_box_cover">
+					<span class="about_box_text_border">
+						<span class="about_box_cover_title">公司全景</span>
+						<span class="about_box_cover_title_eng">Panoramic view of the company</span>
+					</span>
+				</span> -->
+			</a>
+			<a href="http://720yun.com/t/x7m998zowptrr4g4s3?pano_id=lrqLrYfry8Yiexm2" class="simple_card about_box_left2" target="_blank">
+				<img src="images/02.jpg" alt="">
+				<span class="about_box_cover">
+					<span class="about_box_text_border">
+						<span class="about_box_cover_title">公司全景</span>
+						<span class="about_box_cover_title_eng">Panoramic view of the company</span>
+					</span>
+				</span>
+			</a>
+		</div>
+		<div class="about_box_right">
+			<i class="watermark"></i>
+			<div class="about_box_right_title_eng">Company Profile</div>
+			<div class="about_box_right_title">公司简介</div>
+			<p class="about_box_right_text1">江西梵思文化发展有限公司(Jiangxi vans Cultural Development Co. Ltd.) 以房地产营销策划、品牌整合推广、梵思设计工场三大板块为核心业务，是江西首家品牌营销智库与跨界资源运营平台，以打造深度品牌营销平台为核心目标，通过对形象力，产品力，销售力的整体深度策划，形成了以品牌速造，深度营销，精准传播为三大模块，运用品牌运作工具与资源整合方式去推动、催生企业内部新的核心竞争力，建构企业外部更大格局竞争的系统竞争力，成为企业长期发展并且值得信任的品牌“智库”。</p>
+			<a class="about_box_right1" style="cursor: auto;"><img src="images/03.jpg" alt=""></a>
+			<p class="about_box_right_text2">Vans 梵思以品牌营销为核心，为客户提供包括策略研究，广告、公共关系、数字互动营销、活动行销、娱乐营销等在内的各项营销咨询服务，配合客户需求所搭建出来的智库平台，向上延伸到咨询，向下延伸到市场，作为真正的品牌驱动者植入企业内部。同时集人之智，将更多优秀的思路与资源整合起来为客户所用，成为客户系统核心竞争力的一部分。</p>
+		</div>
+	</div>
+	<script>
+		$('.simple_card').hover(function() {
+			$(this).find('.about_box_cover_title').css('display', 'block');
+			$(this).find('.about_box_cover_title').addClass('animated fadeInUp');
+			$(this).find('.about_box_cover_title_eng').css('display', 'block');
+			$(this).find('.about_box_cover_title_eng').addClass('animated fadeInUp');
+		}, function() {
+			$(this).find('.about_box_cover_title').css('display', 'none');
+			$(this).find('.about_box_cover_title_eng').css('display', 'none');
+		});
+	</script>
+
+
+
+	<!-- 底部图片 -->
+	<div class="division">
+		<div class="center">
+			<a class="division_card" style="cursor: auto;">
+				<img src="images/05.jpg" alt="">
+			</a>
+		</div>
+	</div>
+
+
+
+
+
+	<!-- footer开始 -->
+	<div class="footer">
+		<div class="footer_topbar">
+			<div class="center">
+				<div class="follow_us">
+					关注梵思集团
+				</div>
+					<div class="footer_weixin">
+						<!-- 记得替换此二维码 -->
+						<img src="images/qr.jpg" alt="" class="footer_qr">
+					</div>
+			</div>
+		</div>
+		<div class="center">
+			<div class="copyright">版权所有：江西梵思文化发展有限公司 赣ICP备06005994号</div>
+			<ul class="footer_menu">
+				<li><a href="">法律申明</a></li>
+				<li><a href="">投诉建议</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- footer结束 -->
+	<script src="js/main.js"></script>
+</body>
+</html>

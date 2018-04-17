@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.7.1.min.js"></script>
+</head>
+<body>
+<div class="xin_djs" id="timer" data-timer="20160628140203">
+<div class="xin_djs_box"><span id="timer_d"></span>日 •  day</div>
+<div class="xin_djs_box"><span id="timer_h"></span>时 •  hour</div>
+<div class="xin_djs_box"><span id="timer_m"></span>分 •  min</div>
+<div class="xin_djs_box"><span id="timer_s"></span>秒 •  sec</div>
+<div class="asd"></div>
+</div>
+<script>
+	function addDay(dayNumber, date) {
+        date = date ? date : new Date();
+        var ms = dayNumber * (1000 * 60 * 60 * 24)
+        var newDate = new Date(date.getTime() + ms);
+        return newDate;
+    }
+    var fiveDate=addDay(5);
+	var year = fiveDate.getFullYear();
+	var month = fiveDate.getMonth()+1;
+	var day = fiveDate.getDate();
+	var hour = fiveDate.getHours();
+	var minute = fiveDate.getMinutes();
+	var second = fiveDate.getSeconds();
+
+	var timer = setInterval(function () {
+        fiveDate--;
+    }, 1000);
+	console.log(timer)
+
+	$(document).ready(function() {
+		$('#timer_d').text(day);
+		$('#timer_h').text(hour);
+		$('#timer_m').text(minute);
+		$('#timer_s').text(second);
+	});
+
+
+
+	console.log(day+'日'+hour+'时'+minute+'分'+second+'秒')
+</script>
+</body>
+</html>
