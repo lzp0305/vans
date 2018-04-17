@@ -512,7 +512,6 @@
 .division {
   width: 100%;
   height: 344px;
-  background-image: url(../images/04.jpg);
   background-position: center 0;
   margin-bottom: 30px; }
   .division .division_card {
@@ -589,7 +588,8 @@
 
 .brand_box {
   margin-top: 78px;
-  position: relative; }
+  position: relative;
+  margin-bottom: 60px; }
   .brand_box .watermark {
     display: block;
     position: absolute;
@@ -612,3 +612,56 @@
     font-weight: bold;
     margin-top: 10px;
     margin-left: 76px; }
+  .brand_box .brand_text1 {
+    margin-left: 76px;
+    font-size: 14px;
+    line-height: 22px;
+    color: #8c8c8c;
+    margin-top: 15px; }
+  .brand_box .brand_img1 {
+    display: block;
+    width: 483px;
+    height: 294px;
+    float: left; }
+  .brand_box .brand_title2 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #808080;
+    height: 16px;
+    float: left;
+    margin-left: 40px; }
+  .brand_box .brand_text2 {
+    width: 466px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #8c8c8c;
+    float: left;
+    margin-left: 39px;
+    margin-top: 20px; }
+  .brand_box .brand_title3 {
+    font-size: 16px;
+    line-height: 16px;
+    color: #808080;
+    height: 16px; }
+  .brand_box .brand_text3 {
+    width: 466px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #8c8c8c;
+    float: left;
+    margin-top: 20px; }
+  .brand_box .brand_img2 {
+    display: block;
+    float: left;
+    width: 483px;
+    height: 145px;
+    margin-top: 25px; }
+  .brand_box .brand_img3 {
+    display: block;
+    float: right;
+    width: 423px;
+    height: 348px; }
+
+.of {
+  overflow: hidden;
+  padding: 47px 76px 0; }
