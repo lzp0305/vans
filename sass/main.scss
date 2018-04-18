@@ -878,3 +878,348 @@ $tran: all 0.3s;
 	overflow: hidden;
 	padding: 47px 76px 0;
 }
+
+
+.talent_center {
+	padding-bottom: 302px;
+	margin-top: 100px;
+	position: relative;
+	margin-bottom: 60px;
+	.talent_title {
+		font-size: 22px;
+		font-weight: bold;
+		line-height: 22px;
+		color: $red;
+	}
+	.talent_text1 {
+		font-size: 14px;
+		color: #8c8c8c;
+		line-height: 24px;
+		margin-top: 35px;
+		padding-bottom: 54px;
+		border-bottom: 2px solid #f0f0f0;
+	}
+	.talent_four {
+		width: 800px;
+		margin-top: 39px;
+		.talent_four_title {
+			font-size: 15px;
+			line-height: 24px;
+			color: #666666;
+			font-weight: bold;
+		}
+		p {
+			margin-top: 10px;
+			font-size: 14px;
+			line-height: 24px;
+			color: #808080;
+			margin-bottom: 32px;
+		}
+	}
+	.talent_img {
+		position: absolute;
+		display: block;
+	}
+	.talent1 {
+		right: 0;
+		bottom: 302px;
+	}
+	.talent2 {
+		left: 0;
+		bottom: 95px;
+	}
+	.talent3 {
+		left: 480px;
+		bottom: 0;
+	}
+	.talent4 {
+		right: 0;
+		bottom: 96px;
+	}
+}
+
+.project_box {
+	overflow: hidden;
+	.brand_title_eng {
+		margin-left: 60px!important;
+	}
+	.brand_title {
+		margin-left: 60px!important;
+	}
+	.project_big_left {
+		float: left;
+		margin-left: 60px;
+		margin-top: 40px;
+	}
+	.project_big_right {
+		float: right;
+		margin-right: 60px;
+		margin-top: 40px;
+	}
+	.project_big {
+		width: 494px;
+		height: 540px;
+		img {
+			display: block;
+			width: 494px;
+			height: 340px;
+		}
+		.project_text_box {
+			width: 424px;
+			height: 182px;
+			padding: 18px 35px 0;
+			background-color: #f2f2f2;
+			transition: $tran;
+			position: relative;
+			.project_big_date {
+				font-size: 24px;
+				line-height: 32px;
+				color: #999999;
+				transition: $tran;
+			}
+			.project_big_title {
+				display: block;
+				font-size: 16px;
+				line-height: 20px;
+				color: #595959;
+				transition: $tran;
+				max-height: 40px;
+				overflow: hidden;
+			}
+			.project_big_summary {
+				font-size: 12px;
+				line-height: 20px;
+				color: #737373;
+				margin-top: 10px;
+				transition: $tran;
+				overflow: hidden;
+				max-height: 40px;
+			}
+			.project_big_readmore {
+				display: block;
+				position: absolute;
+				left: 35px;
+				bottom: 24px;
+				font-size: 12px;
+				line-height: 12px;
+				margin-top: 24px;
+				color: #404040;
+				transition: $tran;
+				i {
+					display: inline-block;
+					background-image: url(../images/sprite.png);
+					background-position: -114px -15px;
+					width: 16px;
+					height: 10px;
+					margin-right: 5px;
+				}
+			}
+		}
+		&:hover {
+			.project_text_box {
+				background-color: $red;
+				.project_big_date {
+					color: #fff;
+				}
+				.project_big_title {
+					color: #fff;
+				}
+				.project_big_summary {
+					color: #fff;
+				}
+				.project_big_readmore {
+					color: #fff;
+					i {
+						background-position: -114px 0px;
+					}
+				}
+			}
+		}
+	}
+	.project_list {
+		float: left;
+		width: 1020px;
+		margin: 25px 60px 0;
+		li {
+			width: 100%;
+			border-top: 1px solid #ededed;
+			height: 42px;
+			.project_list_date {
+				font-size: 12px;
+				line-height: 42px;
+				color: #737373;
+				float: left;
+				transition: $tran;
+			}
+			.project_list_title {
+				font-size: 12px;
+				line-height: 42px;
+				color: #737373;
+				float: left;
+				margin-left: 15px;
+				height: 42px;
+				overflow: hidden;
+				width: 800px;
+				display: block;
+				-o-text-overflow: ellipsis;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				transition: $tran;
+			}
+			i {
+				display: block;
+				float: right;
+				width: 16px;
+				height: 10px;
+				background-image: url(../images/sprite.png);
+				background-position: -93px -81px;
+				margin-top: 16px;
+			}
+			&:hover {
+				.project_list_date {
+					color: $red;
+				}
+				.project_list_title {
+					color: $red;
+				}
+				i {
+					background-position: -114px -15px;
+				}
+			}
+		}
+	}
+}
+.recommend_news {
+	width: 320px;
+	img {
+		display: block;
+		width: 320px;
+		height: 216px;
+	}
+	.recommend_text_box {
+		padding: 35px 24px 30px;
+		background-color: #f2f2f2;
+		.recommend_date {
+			font-size: 24px;
+			line-height: 24px;
+			color: $red;
+		}
+		.recommend_title {
+			font-size: 20px;
+			line-height: 40px;
+			color: #666666;
+			transition: $tran;
+			white-space: nowrap;
+			display: block;
+			height: 40px;
+			overflow: hidden;
+			-o-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+			&:hover {
+				color: $red;
+			}
+		}
+		.recommend_summary {
+			font-size: 14px;
+			line-height: 22px;
+			color: #999999;
+			max-height: 44px;
+			overflow: hidden;
+		}
+	}
+}
+.visitor {
+	width: 272px;
+	padding: 39px 24px;
+	background-color: $red;
+	.visitor_title {
+		font-size: 18px;
+		line-height: 18px;
+		color: #ffffff;
+	}
+	.visitor_con {
+		font-size: 14px;
+		line-height: 14px;
+		color: #dbdbdb;
+		margin-top: 18px;
+	}
+	.visitor_method {
+		font-size: 13px;
+		line-height: 22px;
+		color: #dbdbdb;
+		margin-top: 30px;
+	}
+}
+.news_main_list {
+	margin-top: 60px;
+	li {
+		height: 125px;
+		padding-left: 170px;
+		background-color: rgba(0,0,0,0);
+		position: relative;
+		.news_main_date {
+			position: absolute;
+			font-size: 24px;
+			line-height: 24px;
+			color: $red;
+			left: 32px;
+			top: 26px;
+		}
+		a {
+			font-size: 16px;
+			line-height: 16px;
+			height: 16px;
+			display: block;
+			width: 500px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			-o-text-overflow: ellipsis;
+			overflow: hidden;
+			padding-top: 30px;
+			color: #333333;
+			font-weight: bold;
+		}
+		p {
+			font-size: 13px;
+			line-height: 13px;
+			height: 15px;
+			display: block;
+			width: 500px;
+			white-space: nowrap;
+			-o-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			color: #999999;
+			margin-top: 21px;
+		}
+		&:hover {
+			background-color: $red;
+			.news_main_date {
+				color: #d9d9d9;
+			}
+			a {
+				color: #d9d9d9;
+			}
+			p {
+				color: #d9d9d9;
+			}
+		}
+	}
+}
+.more_arror {
+	display: block;
+	width: 790px;
+	text-align: center;
+	float: right;
+	margin-top: 30px;
+	margin-bottom: 60px;
+	a {
+		float: none;
+		display: block;
+		width: 51px;
+		height: 51px;
+		background-image: url(../images/sprite.png);
+		background-position: 0 0;
+		margin: 0 auto;
+	}
+}
