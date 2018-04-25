@@ -106,6 +106,7 @@ $tran: all 0.3s;
 			float: left;
 			padding: 0 18px;
 			position: relative;
+			z-index: 2;
 			.fir_a {
 				display: block;
 				// margin: 0 18px;
@@ -118,6 +119,33 @@ $tran: all 0.3s;
 					color: $red;
 				}
 			}
+
+			// 二级
+			.sec_menu {
+				display: none;
+				position: absolute;
+				z-index: 1;
+				width: 10000px;
+				background-color: rgba(0,0,0, 0.5);
+				padding-left: 25px;
+				transition: $tran;
+				.sec_item {
+					height: 60px;
+					float: left;
+					margin-left: 35px;
+					.sec_a {
+						display: block;
+						height: 60px;
+						line-height: 60px;
+						color: #cccccc;
+						font-weight: bold;
+						transition: $tran;
+						&:hover {
+							color: #f00;
+						}
+					}
+				}
+			}
 			&:after {
 				content:'';
 				width: 3px;
@@ -128,6 +156,11 @@ $tran: all 0.3s;
 				position: absolute;
 				top: 47%;
 				right: 0;
+			}
+			&:hover {
+				.sec_menu {
+					display: block;
+				}
 			}
 		}
 		.header_on {
@@ -1266,14 +1299,25 @@ $tran: all 0.3s;
 	float: right;
 	margin-top: 30px;
 	margin-bottom: 60px;
+	padding: 8px 0;
 	a {
 		float: none;
+		padding: 0;
 		display: block;
 		width: 51px;
 		height: 51px;
 		background-image: url(../images/sprite.png);
 		background-position: 0 0;
 		margin: 0 auto;
+	}
+	&:hover {
+		background-color: #f00;
+		a {
+			background-image: url(../images/dd.png);
+			background-size: 51px;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	}
 }
 
@@ -1417,7 +1461,20 @@ $tran: all 0.3s;
 
 
 
-
+.r_title {
+	font-size: 18px;
+	line-height: 18px;
+	color: #f00;
+	margin-left: 60px;
+	margin-top: 40px;
+}
+.r_text {
+	font-size: 14px;
+	line-height: 22px;
+	color: #808080;
+	margin-left: 60px;
+	margin-top: 20px;
+}
 
 
 

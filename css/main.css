@@ -71,7 +71,8 @@
     .header .header_menu .fir_item {
       float: left;
       padding: 0 18px;
-      position: relative; }
+      position: relative;
+      z-index: 2; }
       .header .header_menu .fir_item .fir_a {
         display: block;
         font-size: 15px;
@@ -81,6 +82,27 @@
         transition: all 0.3s; }
         .header .header_menu .fir_item .fir_a:hover {
           color: #ff0000; }
+      .header .header_menu .fir_item .sec_menu {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        width: 10000px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-left: 25px;
+        transition: all 0.3s; }
+        .header .header_menu .fir_item .sec_menu .sec_item {
+          height: 60px;
+          float: left;
+          margin-left: 35px; }
+          .header .header_menu .fir_item .sec_menu .sec_item .sec_a {
+            display: block;
+            height: 60px;
+            line-height: 60px;
+            color: #cccccc;
+            font-weight: bold;
+            transition: all 0.3s; }
+            .header .header_menu .fir_item .sec_menu .sec_item .sec_a:hover {
+              color: #f00; }
       .header .header_menu .fir_item:after {
         content: '';
         width: 3px;
@@ -91,6 +113,8 @@
         position: absolute;
         top: 47%;
         right: 0; }
+      .header .header_menu .fir_item:hover .sec_menu {
+        display: block; }
     .header .header_menu .header_on .fir_a {
       color: #ff0000; }
   .header .back {
@@ -1003,15 +1027,24 @@
   text-align: center;
   float: right;
   margin-top: 30px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  padding: 8px 0; }
   .more_arror a {
     float: none;
+    padding: 0;
     display: block;
     width: 51px;
     height: 51px;
     background-image: url(../images/sprite.png);
     background-position: 0 0;
     margin: 0 auto; }
+  .more_arror:hover {
+    background-color: #f00; }
+    .more_arror:hover a {
+      background-image: url(../images/dd.png);
+      background-size: 51px;
+      background-repeat: no-repeat;
+      background-position: center; }
 
 .news_detail_center {
   overflow: hidden; }
@@ -1123,3 +1156,17 @@
         text-overflow: ellipsis; }
         .news_detail_right .other_news li .other_title:hover {
           color: #ff0000; }
+
+.r_title {
+  font-size: 18px;
+  line-height: 18px;
+  color: #f00;
+  margin-left: 60px;
+  margin-top: 40px; }
+
+.r_text {
+  font-size: 14px;
+  line-height: 22px;
+  color: #808080;
+  margin-left: 60px;
+  margin-top: 20px; }
