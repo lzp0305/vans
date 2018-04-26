@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="云端科技 www.yunduancn.com">
+	<title>梵思</title>
+	<script src="js/jquery-1.7.1.min.js"></script>
+	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+
+
+	<!-- 这个页面请不要在head中引入任何样式文件，并重新引入下面的样式 -->
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- 否则地图插件会变成空百 -->
+
+
+
+
+
+
+
+
+	<!-- 头部开始 -->
+	<div class="header">
+		<div class="center">
+
+			<!-- LOGO -->
+			<a href="" class="logo" style="background-image: url(images/logo.jpg);"></a>
+
+			<!-- 中英文切换 -->
+			<div class="language_change">
+				<span>中/EN</span>
+				<ul class="language_group">
+					<li><a href="">中文简体</a></li>
+					<li><a href="">中文繁體</a></li>
+					<li><a href="">EN</a></li>
+				</ul>
+			</div>
+
+			<!-- 搜索 -->
+			<form action="" class="search_form">
+				<input type="button" class="search_icon" onclick="">
+				<input type="text" class="search_area" placeholder="请输入关键词">
+			</form>
+
+			<!-- 头部导航 -->
+			<ul class="header_menu">
+				<!-- 当前所在加 header_on 这个类 -->
+				<li class="fir_item">
+					<a href="" class="fir_a">首页</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">关于梵思</a>
+				</li>
+				<li class="fir_item header_on">
+					<a href="" class="fir_a">新闻中心</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">人力资源</a>
+				</li>
+				<li class="fir_item">
+					<a href="" class="fir_a">联系我们</a>
+				</li>
+			</ul>
+			<div class="back"></div>
+		</div>
+	</div>
+	<!-- 头部结束 -->
+
+	<!-- 内页banner开始 -->
+	<div class="ny_banner" style="background-image: url(images/nybanner1.jpg);"></div>
+	<!-- 内页banner结束 -->
+
+
+
+	<!-- 面包屑导航开始 -->
+	<div class="crumbs">
+		<div class="center">
+			<a href="" class="gohome"><i></i></a>
+			<a href="" class="now_title">联系我们<i class="fa fa-caret-right" aria-hidden="true"></i></a>
+			<ul class="crumbs_menu">
+				<li><a href="">联系方式</a></li>
+				<li class="crumbs_menu_on"><a href="">位置地图</a></li>
+			</ul>
+			<div class="crumbs_back"></div>
+			<script>
+				// 选项卡导航滑块
+				function crumbsBack() {
+					var oldLeft = $('.crumbs_menu_on').position().left+15;
+					var oldWidth = $('.crumbs_menu_on').width();
+					$('.crumbs_back').css({
+						'left': oldLeft,
+						'width': oldWidth
+					});
+				};
+				// 鼠标经过选项卡时改变滑块位置及宽度
+				$('.crumbs_menu li').hover(function() {
+					var nowLeft = $(this).position().left+15;
+					var nowWidth = $(this).width();
+					$('.crumbs_back').css({
+						'left': nowLeft,
+						'width': nowWidth
+					});
+				}, function() {
+					crumbsBack();
+				});
+				// 初始化
+				crumbsBack();
+			</script>
+		</div>
+	</div>
+	<!-- 面包屑导航结束 -->
+
+
+
+	<div class="t_bar center">
+		<img src="images/llooggoo.jpg" alt="">
+		<div class="title">梵思文化</div>
+		<div class="add">江西省南昌市青山湖区顺外路景河星宫278号</div>
+		<div class="tel">400-990-3307</div>
+		<div class="postcode">邮编：330006</div>
+	</div>
+
+ <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+<div style="width:100%;height:340px;border:#ccc solid 1px; margin:0px auto;" id="dituContent"></div>
+<script type="text/javascript">
+	//创建和初始化地图函数：
+	function initMap(){
+		createMap();//创建地图
+		setMapEvent();//设置地图事件
+		addMapControl();//向地图添加控件
+		addMarker();//向地图中添加marker
+	}
+
+	//创建地图函数：
+	function createMap(){
+		var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+		var point = new BMap.Point(115.942063,28.667886);//定义一个中心点坐标
+		map.centerAndZoom(point,16);//设定地图的中心点和坐标并将地图显示在地图容器中
+		window.map = map;//将map变量存储在全局
+	}
+
+	//地图事件设置函数：
+	function setMapEvent(){
+		map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+		map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+		map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+		map.enableKeyboard();//启用键盘上下左右键移动地图
+	}
+
+	//地图控件添加函数：
+	function addMapControl(){
+		//向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_PAN});
+	map.addControl(ctrl_nav);
+		//向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:0});
+	map.addControl(ctrl_ove);
+		//向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+	}
+
+	//标注点数组
+	var markerArr = [{title:"江西梵思文化发展有限公司",content:"江西省南昌市青山湖区顺外路景河星宫278号",point:"115.942063|28.667886",isOpen:0,icon:{w:23,h:25,l:46,t:21,x:9,lb:12}}
+		];
+	//创建marker
+	function addMarker(){
+		for(var i=0;i<markerArr.length;i++){
+			var json = markerArr[i];
+			var p0 = json.point.split("|")[0];
+			var p1 = json.point.split("|")[1];
+			var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+			var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+			map.addOverlay(marker);
+			label.setStyle({
+						borderColor:"#808080",
+						color:"#333",
+						cursor:"pointer"
+			});
+
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+					this.openInfoWindow(_iw);
+				});
+				_iw.addEventListener("open",function(){
+					_marker.getLabel().hide();
+				})
+				_iw.addEventListener("close",function(){
+					_marker.getLabel().show();
+				})
+				label.addEventListener("click",function(){
+					_marker.openInfoWindow(_iw);
+				})
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+		}
+	}
+	//创建InfoWindow
+	function createInfoWindow(i){
+		var json = markerArr[i];
+		var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+		return iw;
+	}
+	//创建一个Icon
+	function createIcon(json){
+		var icon = new BMap.Icon("images/mapicon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+		return icon;
+	}
+
+	initMap();//创建和初始化地图
+</script>
+
+	<!-- footer开始 -->
+	<div class="footer">
+		<div class="footer_topbar">
+			<div class="center">
+				<div class="follow_us">
+					关注梵思集团
+				</div>
+					<div class="footer_weixin">
+						<!-- 记得替换此二维码 -->
+						<img src="images/qr.jpg" alt="" class="footer_qr">
+					</div>
+			</div>
+		</div>
+		<div class="center">
+			<div class="copyright">版权所有：江西梵思文化发展有限公司 赣ICP备06005994号</div>
+			<ul class="footer_menu">
+				<li><a href="">法律申明</a></li>
+				<li><a href="">投诉建议</a></li>
+				<li><a href="">联系我们</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- footer结束 -->
+
+	<script src="js/main.js"></script>
+</body>
+</html>

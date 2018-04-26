@@ -21,6 +21,11 @@ $tran: all 0.3s;
 }
 
 
+@font-face {
+	font-family:zqkjht;
+    src:url(../fonts/郑庆科建黑体.ttf);
+}
+
 
 
 .header {
@@ -1475,6 +1480,146 @@ $tran: all 0.3s;
 	margin-left: 60px;
 	margin-top: 20px;
 }
+.r_group {
+	width: 1044px;
+	height: 260px;
+	margin-left: 60px;
+	margin-top: 40px;
+	li {
+		width: 180px;
+		height: 260px;
+		margin-right: 81px;
+		float: left;
+		a {
+			overflow: hidden;
+			display: block;
+			width: 178px;
+			height: 258px;
+			border: 1px solid #999999;
+			transition: $tran;
+			.title_c {
+				font-size: 18px;
+				line-height: 18px;
+				font-weight: bold;
+				color: #808080;
+				text-align: center;
+				display: block;
+				margin-top: 33px;
+				transition: $tran;
+			}
+			.title_e {
+				font-size: 16px;
+				line-height: 16px;
+				display: block;
+				color: #808080;
+				text-align: center;
+				margin-top: 15px;
+				transition: $tran;
+			}
+			.block {
+				display: block;
+				width: 48px;
+				height: 2px;
+				background-color: #f00;
+				margin: 120px auto 0;
+				transition: $tran;
+			}
+			.num {
+				font-size: 14px;
+				line-height: 14px;
+				color: #999999;
+				display: block;
+				text-align: center;
+				margin-top: 20px;
+				transition: $tran;
+			}
+			&:hover {
+				background-color: #f00;
+				border: 1px solid #f00;
+				.title_c,.title_e,.num {
+					color: #fff;
+				}
+				.block {
+					background-color: #fff;
+				}
+			}
+		}
+	}
+}
+.lookmore {
+	display: block;
+	width: 205px;
+	height: 46px;
+	margin: 65px auto 0;
+	border: 2px solid #f00;
+	line-height: 46px;
+	font-size: 16px;
+	color: #f00;
+	padding: 0 13px 0 18px;
+	transition: $tran;
+	.fa {
+		float: right;
+		margin-top: 15px;
+	}
+	&:hover {
+		background-color: #f00;
+		color: #fff;
+	}
+}
 
 
 
+
+
+.t_bar {
+	margin-top: 50px;
+	overflow: hidden;
+	background-color: #f2f2f2;
+	img {
+		display: block;
+		width: 370px;
+		height: 260px;
+		float: left;
+	}
+	.title {
+		float: left;
+		width: 720px;
+		font-size: 18px;
+		line-height: 18px;
+		color: #737373;
+		margin-left: 50px;
+		margin-top: 66px;
+	}
+	.add {
+		font-size: 14px;
+		line-height: 14px;
+		color: #999999;
+		float: left;
+		width: 720px;
+		margin-left: 50px;
+		margin-top: 15px;
+	}
+	.tel {
+		font-family: zqkjht;
+		font-size: 24px;
+		color: #f00;
+		line-height: 24px;
+		margin-left: 50px;
+		margin-top: 35px;
+		width: 720px;
+		float: left;
+	}
+	.postcode {
+		font-size: 14px;
+		float: left;
+		line-height: 14px;
+		width: 720px;
+		margin-left: 50px;
+		margin-top: 15px;
+		color: #999999;
+	}
+}
+
+.iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+.iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+.BMap_Marker{background: url(../images/mapicon.png) no-repeat center !important;}
