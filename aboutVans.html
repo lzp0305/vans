@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script src="js/jquery.aniview.min.js"></script>
 </head>
 <body>
 	<!-- 头部开始 -->
@@ -77,31 +78,6 @@
 				<li><a href="">企业理念</a></li>
 				<li><a href="">品牌战略</a></li>
 			</ul>
-			<div class="crumbs_back"></div>
-			<script>
-				// 选项卡导航滑块
-				function crumbsBack() {
-					var oldLeft = $('.crumbs_menu_on').position().left+15;
-					var oldWidth = $('.crumbs_menu_on').width();
-					$('.crumbs_back').css({
-						'left': oldLeft,
-						'width': oldWidth
-					});
-				};
-				// 鼠标经过选项卡时改变滑块位置及宽度
-				$('.crumbs_menu li').hover(function() {
-					var nowLeft = $(this).position().left+15;
-					var nowWidth = $(this).width();
-					$('.crumbs_back').css({
-						'left': nowLeft,
-						'width': nowWidth
-					});
-				}, function() {
-					crumbsBack();
-				});
-				// 初始化
-				crumbsBack();
-			</script>
 		</div>
 	</div>
 	<!-- 面包屑导航结束 -->
@@ -134,9 +110,9 @@
 			<i class="watermark"></i>
 			<div class="about_box_right_title_eng">Company Profile</div>
 			<div class="about_box_right_title">公司简介</div>
-			<p class="about_box_right_text1">江西梵思文化发展有限公司(Jiangxi vans Cultural Development Co. Ltd.) 以房地产营销策划、品牌整合推广、梵思设计工场三大板块为核心业务，是江西首家品牌营销智库与跨界资源运营平台，以打造深度品牌营销平台为核心目标，通过对形象力，产品力，销售力的整体深度策划，形成了以品牌速造，深度营销，精准传播为三大模块，运用品牌运作工具与资源整合方式去推动、催生企业内部新的核心竞争力，建构企业外部更大格局竞争的系统竞争力，成为企业长期发展并且值得信任的品牌“智库”。</p>
+			<p class="about_box_right_text1">&emsp;&emsp;江西梵思文化发展有限公司(Jiangxi vans Cultural Development Co. Ltd.) 以房地产营销策划、品牌整合推广、梵思设计工场三大板块为核心业务，是江西首家品牌营销智库与跨界资源运营平台，以打造深度品牌营销平台为核心目标，通过对形象力，产品力，销售力的整体深度策划，形成了以品牌速造，深度营销，精准传播为三大模块，运用品牌运作工具与资源整合方式去推动、催生企业内部新的核心竞争力，建构企业外部更大格局竞争的系统竞争力，成为企业长期发展并且值得信任的品牌“智库”。</p>
 			<a class="about_box_right1" style="cursor: auto;"><img src="images/03.jpg" alt=""></a>
-			<p class="about_box_right_text2">Vans 梵思以品牌营销为核心，为客户提供包括策略研究，广告、公共关系、数字互动营销、活动行销、娱乐营销等在内的各项营销咨询服务，配合客户需求所搭建出来的智库平台，向上延伸到咨询，向下延伸到市场，作为真正的品牌驱动者植入企业内部。同时集人之智，将更多优秀的思路与资源整合起来为客户所用，成为客户系统核心竞争力的一部分。</p>
+			<p class="about_box_right_text2">&emsp;&emsp;Vans 梵思以品牌营销为核心，为客户提供包括策略研究，广告、公共关系、数字互动营销、活动行销、娱乐营销等在内的各项营销咨询服务，配合客户需求所搭建出来的智库平台，向上延伸到咨询，向下延伸到市场，作为真正的品牌驱动者植入企业内部。同时集人之智，将更多优秀的思路与资源整合起来为客户所用，成为客户系统核心竞争力的一部分。</p>
 		</div>
 	</div>
 	<script>
@@ -157,10 +133,17 @@
 	<div class="division" style="background-image: url(images/04.jpg);">
 		<div class="center">
 			<a class="division_card" style="cursor: auto;">
-				<img src="images/05.jpg" alt="">
+				<img src="images/sblock1.png" alt="" class="sblock1 aniview" av-animation="fadeInDown">
+				<img src="images/sblock2.png" alt="" class="sblock2 aniview" av-animation="fadeInDown">
+				<img src="images/sblock3.jpg" alt="" class="sblock3">
 			</a>
 		</div>
 	</div>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.aniview').AniView();
+		});
+	</script>
 
 
 

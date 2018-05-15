@@ -10,32 +10,32 @@ function back() {
 
 // 打开搜索框
 function showSearchArea(event) {
-	$('.search_area').css({
+	$('.search_area').stop(false,true).css({
 		'width': '170px',
 		'padding': '0 14px',
 		'border': '1px solid #f00'
 	});
-	$('.search_icon').css('background-position', '-17px -81px');
+	$('.search_icon').stop(false,true).css('background-position', '-17px -81px');
 	// $('.search_icon').attr('onclick', 'hideSearchArea()')
 	var backLeft = $('.back').position().left;
 	var backWidth = $('.back').width();
-	$('.back').css({
+	$('.back').stop(false,true).css({
 		'left': backLeft-200,
 		'width': backWidth
 	});
 };
 // 关闭搜索框
 function hideSearchArea() {
-	$('.search_area').css({
+	$('.search_area').stop(false,true).css({
 		'width': '0',
 		'padding': '0 0',
 		'border': '0'
 	});
-	$('.search_icon').css('background-position', '-74px -81px');
+	$('.search_icon').stop(false,true).css('background-position', '-74px -81px');
 	// $('.search_icon').attr('onclick', 'showSearchArea()')
 	var backLeft = $('.back').position().left;
 	var backWidth = $('.back').width();
-	$('.back').css({
+	$('.back').stop(false,true).css({
 		'left': backLeft+200,
 		'width': backWidth
 	});
@@ -46,13 +46,20 @@ $('.search_icon').click(function() {
 	var doesItHide = $('.search_area').width();
 	var doesHasValue = $('.search_area').val();
 	if (doesItHide == '0') {
-		showSearchArea();
 	} else if (doesHasValue == '') {
 		hideSearchArea();
 	} else {
-		alert('有数据');
+		alert('有数据:'+doesHasValue);
 		$('.search_icon').prop('type', 'submit');
 	}
+});
+$('.search_icon').hover(function() {
+	var doesItHide = $('.search_area').width();
+	var doesHasValue = $('.search_area').val();
+	if (doesItHide == '0') {
+		showSearchArea();
+	} else {}
+}, function() {
 });
 
 

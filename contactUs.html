@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script src="js/jquery.aniview.min.js"></script>
 </head>
 <body>
 	<!-- 头部开始 -->
@@ -76,31 +77,6 @@
 				<li class="crumbs_menu_on"><a href="">联系方式</a></li>
 				<li><a href="">位置地图</a></li>
 			</ul>
-			<div class="crumbs_back"></div>
-			<script>
-				// 选项卡导航滑块
-				function crumbsBack() {
-					var oldLeft = $('.crumbs_menu_on').position().left+15;
-					var oldWidth = $('.crumbs_menu_on').width();
-					$('.crumbs_back').css({
-						'left': oldLeft,
-						'width': oldWidth
-					});
-				};
-				// 鼠标经过选项卡时改变滑块位置及宽度
-				$('.crumbs_menu li').hover(function() {
-					var nowLeft = $(this).position().left+15;
-					var nowWidth = $(this).width();
-					$('.crumbs_back').css({
-						'left': nowLeft,
-						'width': nowWidth
-					});
-				}, function() {
-					crumbsBack();
-				});
-				// 初始化
-				crumbsBack();
-			</script>
 		</div>
 	</div>
 	<!-- 面包屑导航结束 -->
@@ -110,25 +86,25 @@
 
 	<div class="contact_center center">
 		<ul class="branch">
-			<li>
+			<li class="aniview" av-animation="fadeInUp">
 				<div class="branch_chi">南昌公司</div>
 				<div class="branch_eng">Nanchang Branch</div>
 				<div class="branch_add">中国江西南昌市青山湖区顺外路278号</div>
 				<div class="branch_tel">Tel：+86 400 990 3307</div>
 			</li>
-			<li>
+			<li class="aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.1s;">
 				<div class="branch_chi">上海公司</div>
 				<div class="branch_eng">Shanghai Branch</div>
 				<div class="branch_add">中国上海市国定路335号3号楼9B室</div>
 				<div class="branch_tel">Tel：+86 400 990 3307</div>
 			</li>
-			<li>
+			<li class="aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.2s;">
 				<div class="branch_chi">广州公司</div>
 				<div class="branch_eng">Guangzhou Branch</div>
 				<div class="branch_add">中国广州市天河区华景北路191号E座1102</div>
 				<div class="branch_tel">Tel：+86 400 990 3307</div>
 			</li>
-			<li>
+			<li class="aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.3s;">
 				<div class="branch_chi">福州公司</div>
 				<div class="branch_eng">Fuzhou Branch</div>
 				<div class="branch_add">中国福州市天河区华景北路191号E座1102</div>
@@ -141,23 +117,23 @@
 
 
 		<ul class="contact_method">
-			<div class="contact_text">感谢您关注E&amp;B梵思文化。<br> 如果您对我们提供的服务感兴趣，请致电我们：</div>
-			<li>
+			<div class="contact_text aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.4s;">感谢您关注E&amp;B梵思文化。<br> 如果您对我们提供的服务感兴趣，请致电我们：</div>
+			<li class="aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.5s;">
 				<div class="method_chi">地产策划</div>
 				<div class="method_tel">电话：+86 13807097787</div>
 				<div class="method_email">邮箱：chnvans@163.com</div>
 			</li>
-			<li>
+			<li class="aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.6s;">
 				<div class="method_chi">品牌整合</div>
 				<div class="method_tel">电话：+86 13807097787</div>
 				<div class="method_email">邮箱：chnvans@163.com</div>
 			</li>
-			<li>
+			<li class="aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.7s;">
 				<div class="method_chi">设计工厂</div>
 				<div class="method_tel">电话：+86 13807097787</div>
 				<div class="method_email">邮箱：chnvans@163.com</div>
 			</li>
-			<li>
+			<li class="aniview" av-animation="fadeInUp" style="animation-duration: 0.7s; animation-delay: 0.8s;">
 				<div class="method_chi">人力资源</div>
 				<div class="method_tel">电话：+86 13807097787</div>
 				<div class="method_email">邮箱：chnvans@163.com</div>
@@ -165,7 +141,9 @@
 		</ul>
 	</div>
 
-
+	<script>
+		$('.aniview').AniView();
+	</script>
 
 
 

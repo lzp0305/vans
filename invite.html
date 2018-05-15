@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script src="js/jquery.aniview.min.js"></script>
 </head>
 <body>
 	<!-- 头部开始 -->
@@ -76,31 +77,6 @@
 				<li><a href="">人才理念</a></li>
 				<li class="crumbs_menu_on"><a href="">人才招聘</a></li>
 			</ul>
-			<div class="crumbs_back"></div>
-			<script>
-				// 选项卡导航滑块
-				function crumbsBack() {
-					var oldLeft = $('.crumbs_menu_on').position().left+15;
-					var oldWidth = $('.crumbs_menu_on').width();
-					$('.crumbs_back').css({
-						'left': oldLeft,
-						'width': oldWidth
-					});
-				};
-				// 鼠标经过选项卡时改变滑块位置及宽度
-				$('.crumbs_menu li').hover(function() {
-					var nowLeft = $(this).position().left+15;
-					var nowWidth = $(this).width();
-					$('.crumbs_back').css({
-						'left': nowLeft,
-						'width': nowWidth
-					});
-				}, function() {
-					crumbsBack();
-				});
-				// 初始化
-				crumbsBack();
-			</script>
 		</div>
 	</div>
 	<!-- 面包屑导航结束 -->

@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="css/main.css">
 	<script src="js/jquery-1.7.1.min.js"></script>
 	<script src="js/jquery.SuperSlide.2.1.1.js"></script>
+	<script src="js/jquery.aniview.min.js"></script>
 </head>
 <body>
 	<!-- 头部开始 -->
@@ -149,7 +150,7 @@
 				<!-- 当前所在，轮播图插件自动添加 slide_card_on 类 -->
 				<li><a href="javascript:void(0);">公司新闻</a></li>
 				<li><a href="javascript:void(0);">项目动态</a></li>
-				<div class="slide_card_back"></div>
+				<!-- <div class="slide_card_back"></div> -->
 			</ul>
 			<div class="slide_card_main">
 				<ul>
@@ -253,12 +254,19 @@
 					<li><a href="">案例展示</a></li>
 				</ul>
 			</li>
-			<a href="" class="right_card_item2" style="background-image: url(images/design.jpg);">
-				<div class="right_card_title2">设计工厂</div>
-				<div class="right_card_title_eng2">Design workshop</div>
-				<div class="line2"></div>
-				<div class="arror_down2"></div>
-			</a>
+			<li href="" class="right_card_item" style="background-image: url(images/design.jpg);">
+				<div class="cover_layer"></div>
+				<div class="right_card_title">设计工场</div>
+				<div class="right_card_title_eng">Design workshop</div>
+				<div class="line"></div>
+				<div class="arror_down"></div>
+				<ul class="right_a_group">
+					<li><a href="">首页</a></li>
+					<li><a href="">关于我们</a></li>
+					<li><a href="">价格体系</a></li>
+					<li><a href="">案例</a></li>
+				</ul>
+			</li>
 		</ul>
 		<script>
 			// 右侧三个栏目动画效果
@@ -290,7 +298,7 @@
 		<div class="footer_topbar">
 			<div class="center">
 				<div class="follow_us">
-					关注梵思集团
+					关注梵思文化
 				</div>
 					<div class="footer_weixin">
 						<!-- 记得替换此二维码 -->
